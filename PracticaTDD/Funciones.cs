@@ -10,17 +10,13 @@ namespace PracticaTDD
     {
         public static long CalcularFactorial(int n)
         {
-            if (n == 0)
-            {
-                return 1;
-            }
+            if (n < 0) return -1;
+            if (n == 0) return 1;
 
-            if (n < 0)
-            { 
-                return -1;
-            }
+            long factorial = 1;
+            for (int i = 2; i <= n; i++) factorial *= i;
 
-            return n * CalcularFactorial(n - 1);    
+            return factorial;
         }
     }
 }
