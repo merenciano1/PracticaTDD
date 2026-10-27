@@ -17,5 +17,18 @@ namespace TestPracticaTDD
             var resultado = Funciones.CalcularFactorial(numero);
             Assert.AreEqual(resultadoEsperado, resultado);
         }
+
+        [TestMethod]
+        [DataRow(null, false)]
+        [DataRow("", false)]
+        [DataRow("12345678", false)]
+        [DataRow("123456#", false)]
+        [DataRow("1234567#", true)]
+        [DataRow("contrasenya#segura", true)]
+        public void TestEsContrasenyaValida(string contrasenya, bool resultadoEsperado)
+        {
+            bool resultado = Funciones.EsContrasenyaValida(contrasenya);
+            Assert.AreEqual(resultadoEsperado, resultado);
+        }
     }
 }
