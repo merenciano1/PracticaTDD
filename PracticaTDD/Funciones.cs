@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace PracticaTDD
 {
-    public class Funciones
+    public class Funciones //JoMeRu2627
     {
-
+        public static long CalcularFactorial(int n)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
