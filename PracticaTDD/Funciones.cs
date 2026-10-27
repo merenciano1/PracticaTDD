@@ -6,8 +6,24 @@ using System.Threading.Tasks;
 
 namespace PracticaTDD
 {
-    public class Funciones
+    public class Funciones //JoMeRu2627
     {
+        public static long CalcularFactorial(int n)
+        {
+            if (n < 0) return -1;
+            if (n == 0) return 1;
 
+            long factorial = 1;
+            for (int i = 2; i <= n; i++) factorial *= i;
+
+            return factorial;
+        }
+
+        public static bool EsContrasenyaValida(string contrasenya)
+        {
+            return !String.IsNullOrEmpty(contrasenya)
+                && contrasenya.Length >= 8
+                && contrasenya.Contains("#");
+        }
     }
 }
