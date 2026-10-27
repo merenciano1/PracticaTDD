@@ -10,7 +10,17 @@ namespace PracticaTDD
     {
         public static long CalcularFactorial(int n)
         {
-            throw new NotImplementedException();
+            if (n == 0)
+            {
+                return 1;
+            }
+
+            if (n < 0)
+            { 
+                return -1;
+            }
+
+            return n * CalcularFactorial(n - 1);    
         }
     }
 }
